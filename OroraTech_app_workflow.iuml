@@ -1,0 +1,22 @@
+@startuml OroraTech Application
+
+actor Operator
+participant Server
+participant Program
+
+
+
+Operator->Server: For the input data provide me with fire information
+Server->Program: REST API Call - Get Fire information
+
+== Analyse Data ==
+Server->Program: Filter to get info based on location, timeframe, relevant incidents
+Program->Server: Give back filtered outcome
+Server->Program: Transform GEOJson to extract meaningful data
+Server->Program: Give me fires analytics based on response
+Program->Server: Diagram with fires per hour
+Server->Program: How many are larger than 1000 acres
+Program->Server: List or table with response
+
+== Final Outcome ==
+Server->Operator: Requested Analysis of data
