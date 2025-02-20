@@ -6,6 +6,9 @@ from field import *
 from spatialReference import *
 import pytz
 import numpy
+import matplotlib
+matplotlib.use('Agg')  # Set the backend to 'Agg' for non-GUI usage
+import matplotlib.pyplot as plt
 
 class ArcGISResponse:
     def __init__(self, objectIdFieldName, uniqueIdField, globalIdFieldName, geometryType, spatialReference, fields, exceededTransferLimit, features):

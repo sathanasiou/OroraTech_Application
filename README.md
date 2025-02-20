@@ -36,8 +36,8 @@ In order to the application the following steps are required:
 #### Run Application using Docker Compose
 Before you run locally, clone this repository: 
 ```
-git clone <Repository-name>
-cd <repository-file>
+git clone https://github.com/sathanasiou/OroraTech_Application.git
+cd OroraTech_Application
 ```
 1. Make sure a docker client is installed, try: 
 ```
@@ -72,26 +72,27 @@ python flask.py
 ```
 5. Test the application: 
 
+The application will lounch in the following page: 
+
+
 Supported URIs: 
 ```
-GET /fires/location?location=<location_name>
-GET /fires/date?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD
-GET /fires/areas
-GET /plots/incident_hours?location=<location_name>&timezone=<timezone>
-GET /plots/affected_areas
-GET /plots/correlation
+GET /fires/location?location=<location_name> -- ok 
+GET /fires/date?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD -- ok 
+GET /fires/areas -- ok 
+GET /plots/incident_hours?location=<location_name>&timezone=<timezone> --ok 
+GET /plots/affected_areas -- ok 
+GET /plots/correlation -- ok
 GET /analysis/ignition_times?location=<location_name>&timezone=<timezone>
-GET /analysis/affected_areas
+GET /analysis/affected_areas -- ok 
 ```
 
-
-TODO: curl example from Postman, 
-TODO: Postman example, 
-TODO: python example
+There is also a Postman collection added to the repository for easy testing of the API.
 
 ## Constrains - Observations
 
 * Sometimes location is not part of the POOCity or the POOCountry so there is the need to search also in other fields, such us IncidentName. 
+* In the requirements it was mentioned to search for Colorado through while studying the API I could not find entries for Colorado.
 * The API Documentation is not refering to the measurement unit and to parameters (input) limitations, making it harder to understand what the inputs you are providing are representing. For example in the Field FinalAcres, there is no description so that you can relate the values to acre, meters or other. In the current application we are assuming that the value is using acres.
 * The management of different time zones in order to be able to correctly interpret the results.
 * Scalability issues, if data grow larger, the application currently is not ready to support that. 

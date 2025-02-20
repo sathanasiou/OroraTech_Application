@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "692056e2-f758-4fa5-8b53-ddd165ba2cfd",
+		"name": "OroraTech Application Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9129516"
+	},
+	"item": [
+		{
+			"name": "Get location Information",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Incidents with greater than 1000 acres size",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Incidents for a specific time range",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Incidents as per hour for a specific Location",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Analysis of sum of fires larger than 1000 over total fires",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get correlation plot of Time that an Incident happened and The Final Burned Area in Acres",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get affected areas and distribution of fire",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Analysis of ignition for specific area on specific time zone",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
